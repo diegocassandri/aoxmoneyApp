@@ -9,18 +9,20 @@
     {
       "sourceType": "com.aox.aoxmoney.api.config.property.AlgamoneyApiProperty",
       "name": "algamoney.seguranca",
-      "sourceMethod": "public com.aox.aoxmoney.api.config.property.AlgamoneyApiProperty.Seguranca getSeguranca() ",
+      "sourceMethod": "getSeguranca()",
       "type": "com.aox.aoxmoney.api.config.property.AlgamoneyApiProperty$Seguranca"
     }
   ],
   "properties": [
     {
       "sourceType": "com.aox.aoxmoney.api.config.property.AlgamoneyApiProperty",
+      "defaultValue": "http:\/\/localhost:8000",
       "name": "algamoney.origin-permitida",
       "type": "java.lang.String"
     },
     {
       "sourceType": "com.aox.aoxmoney.api.config.property.AlgamoneyApiProperty$Seguranca",
+      "defaultValue": false,
       "name": "algamoney.seguranca.enable-https",
       "type": "java.lang.Boolean"
     }
