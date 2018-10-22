@@ -16,6 +16,11 @@ label {
   }
 }
 
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
 .col-valor {
   width: 120px;
   text-align: right;
@@ -24,4 +29,13 @@ label {
 .col-data {
   width: 120px;
   text-align: center;
+}
+
+.col-acoes {
+  width: 90px;
+  text-align: center;
+}
+
+.ui-dropdown-filter-container {
+  width: 100%;
 }
