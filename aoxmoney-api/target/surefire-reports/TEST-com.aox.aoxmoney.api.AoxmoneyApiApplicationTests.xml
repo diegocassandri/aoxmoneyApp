@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.aox.aoxmoney.api.AoxmoneyApiApplicationTests" time="0.174" tests="1" errors="0" skipped="0" failures="0">
+<testsuite name="com.aox.aoxmoney.api.AoxmoneyApiApplicationTests" time="0.181" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="idea.version" value="2017.3.5"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -62,5 +62,5 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="contextLoads" classname="com.aox.aoxmoney.api.AoxmoneyApiApplicationTests" time="0.174"/>
+  <testcase name="contextLoads" classname="com.aox.aoxmoney.api.AoxmoneyApiApplicationTests" time="0.181"/>
 </testsuite>
