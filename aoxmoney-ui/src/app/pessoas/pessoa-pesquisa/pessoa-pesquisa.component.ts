@@ -5,6 +5,7 @@ import { ErrorHandlerService } from '../../core/error-handler.service';
 
 import { ConfirmationService } from 'primeng/components/common/api';
 import { ToastyService } from 'ng2-toasty';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-pessoa-pesquisa',
@@ -21,9 +22,11 @@ export class PessoaPesquisaComponent implements OnInit {
   constructor(private pessoaService: PessoaService,
     private toasty: ToastyService,
     private confirmation: ConfirmationService,
-    private errorHandler: ErrorHandlerService) { }
+    private errorHandler: ErrorHandlerService,
+    private title: Title) { }
 
   ngOnInit() {
+    this.title.setTitle('Pesquisa de Pessoas');
 
   }
 

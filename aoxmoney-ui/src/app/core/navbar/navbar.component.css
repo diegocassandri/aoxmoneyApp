@@ -6,12 +6,13 @@
 .navbar-toggle {
   color: #fff;
 }
+
 .navbar-menu {
   position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
-  width: 210 px;
+  width: 210px;
   margin: 0;
   padding: 0;
   z-index: 9998;
@@ -29,8 +30,6 @@
   text-transform: uppercase;
   font-weight: bold;
   color: #fff;
-
-  text-decoration: none;
 }
 
 .navbar-menuitem {
@@ -44,4 +43,8 @@
 
 .navbar-menuitem a:hover {
   color: #fff;
+}
+
+.navbar-menuitem.ativo {
+  background-color: #494541;
 }

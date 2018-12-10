@@ -1,15 +1,12 @@
-<app-navbar></app-navbar>
 
-<app-lancamento-cadastro></app-lancamento-cadastro>
-<app-lancamento-pesquisa></app-lancamento-pesquisa>
+<app-navbar *ngIf="exibindoNavbar()"></app-navbar>
 
-<app-pessoa-cadastro></app-pessoa-cadastro>
-<app-pessoa-pesquisa></app-pessoa-pesquisa>
+<router-outlet></router-outlet>
 
 <!--
 -->
 
-<ng2-toasty></ng2-toasty>
+<ng2-toasty [position]="'top-right'" ></ng2-toasty>
 
 <p-confirmDialog header="Confirmação" icon="fa fa-question-circle" #confirmacao>
   <p-footer>

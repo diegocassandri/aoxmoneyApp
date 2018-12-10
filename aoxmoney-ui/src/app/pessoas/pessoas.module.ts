@@ -11,6 +11,7 @@ import { InputTextModule } from 'primeng/components/inputtext/inputtext';
 import { PessoaPesquisaComponent } from './pessoa-pesquisa/pessoa-pesquisa.component';
 import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.component';
 import { SharedModule } from '../shared/shared.module';
+import { PessoasRoutingModule } from './pessoas.routing.module';
 
 
 
@@ -23,14 +24,12 @@ import { SharedModule } from '../shared/shared.module';
     ButtonModule,
     DataTableModule,
     TooltipModule,
-    InputMaskModule
+    InputMaskModule,
+    PessoasRoutingModule
   ],
   declarations: [
     PessoaCadastroComponent,
     PessoaPesquisaComponent],
-  exports: [
-    PessoaCadastroComponent,
-    PessoaPesquisaComponent
-  ]
+  exports: []
 })
 export class PessoasModule { }

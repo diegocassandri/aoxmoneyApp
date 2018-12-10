@@ -9,19 +9,26 @@ import { registerLocaleData } from '@angular/common';
 import { ConfirmDialogModule } from 'primeng/components/confirmdialog/confirmdialog';
 import { ToastyModule } from 'ng2-toasty';
 import { ConfirmationService } from 'primeng/components/common/api';
+import {JwtHelper} from 'angular2-jwt';
 
 import { ErrorHandlerService } from './error-handler.service';
 import { CategoriasService } from '../categorias/categorias.service';
+import { RouterModule } from '@angular/router';
+import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada.component';
+import { Title } from '@angular/platform-browser';
+import { AuthService } from '../seguranca/auth.service';
+import { NaoAutorizadoComponent } from './nao-autorizado.component';
 
 registerLocaleData(localePt, 'pt-BR');
 @NgModule({
   imports: [
     CommonModule,
+    RouterModule,
 
     ToastyModule.forRoot(),
     ConfirmDialogModule,
   ],
-  declarations: [NavbarComponent],
+  declarations: [NavbarComponent, PaginaNaoEncontradaComponent, NaoAutorizadoComponent],
   exports: [
     NavbarComponent,
     ToastyModule,
@@ -31,8 +38,11 @@ registerLocaleData(localePt, 'pt-BR');
     PessoaService,
     CategoriasService,
     ErrorHandlerService,
+    Title,
+    AuthService,
 
     ConfirmationService,
+    JwtHelper,
     { provide: LOCALE_ID, useValue: 'pt-BR' }
   ]
 })

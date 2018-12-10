@@ -15,6 +15,7 @@ import { InputTextModule } from 'primeng/components/inputtext/inputtext';
 import { LancamentoPesquisaComponent } from './lancamento-pesquisa/lancamento-pesquisa.component';
 import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
 import { SharedModule } from '../shared/shared.module';
+import { LancamentosRoutingModule } from './lancamento-routing.module';
 
 
 
@@ -31,15 +32,13 @@ import { SharedModule } from '../shared/shared.module';
     CalendarModule,
     SelectButtonModule,
     DropdownModule,
-    CurrencyMaskModule
+    CurrencyMaskModule,
+    LancamentosRoutingModule
   ],
   declarations: [
     LancamentoCadastroComponent,
     LancamentoPesquisaComponent
   ],
-  exports: [
-    LancamentoCadastroComponent,
-    LancamentoPesquisaComponent
-  ]
+  exports: []
 })
 export class LancamentosModule { }
