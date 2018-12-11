@@ -10,7 +10,7 @@ export class CategoriasService {
   categoriasUrl: string;
 
   constructor(private http: AuthHttp) {
-    this.categoriasUrl = `${environment.apiUrl}/caregorias`;
+    this.categoriasUrl = `${environment.apiUrl}/categorias`;
   }
 
   listarTodas(): Promise<any> {
