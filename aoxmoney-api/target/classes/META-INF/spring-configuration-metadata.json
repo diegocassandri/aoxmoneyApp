@@ -19,6 +19,12 @@
       "defaultValue": "http:\/\/localhost:4200",
       "name": "algamoney.origin-permitida",
       "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.aox.aoxmoney.api.config.property.AlgamoneyApiProperty$Seguranca",
+      "defaultValue": false,
+      "name": "algamoney.seguranca.enable-https",
+      "type": "java.lang.Boolean"
     }
   ]
 }

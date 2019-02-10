@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { CurrencyMaskModule } from 'ng2-currency-mask';
 import { DropdownModule } from 'primeng/components/dropdown/dropdown';
@@ -23,6 +23,7 @@ import { LancamentosRoutingModule } from './lancamento-routing.module';
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     SharedModule,
     InputTextModule,
     ButtonModule,
