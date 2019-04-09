@@ -4,6 +4,7 @@
 /Users/diegocassandri/DEV/Projetos/Próprios/aoxmoneyApp/aoxmoney-api/src/main/java/com/aox/aoxmoney/api/service/PessoaService.java
 /Users/diegocassandri/DEV/Projetos/Próprios/aoxmoneyApp/aoxmoney-api/src/main/java/com/aox/aoxmoney/api/repository/lancamento/LancamentoRepositoryQuery.java
 /Users/diegocassandri/DEV/Projetos/Próprios/aoxmoneyApp/aoxmoney-api/src/main/java/com/aox/aoxmoney/api/model/Endereco_.java
+/Users/diegocassandri/DEV/Projetos/Próprios/aoxmoneyApp/aoxmoney-api/src/main/java/com/aox/aoxmoney/api/dto/LancamentoEstatisticaCategoria.java
 /Users/diegocassandri/DEV/Projetos/Próprios/aoxmoneyApp/aoxmoney-api/src/main/java/com/aox/aoxmoney/api/model/TipoLancamento.java
 /Users/diegocassandri/DEV/Projetos/Próprios/aoxmoneyApp/aoxmoney-api/src/main/java/com/aox/aoxmoney/api/token/RefreshTokenCookiePreProcessorFilter.java
 /Users/diegocassandri/DEV/Projetos/Próprios/aoxmoneyApp/aoxmoney-api/src/main/java/com/aox/aoxmoney/api/repository/CategoriaRepository.java
@@ -11,12 +12,14 @@
 /Users/diegocassandri/DEV/Projetos/Próprios/aoxmoneyApp/aoxmoney-api/src/main/java/com/aox/aoxmoney/api/service/exception/PessoaInexistenteOuInativaException.java
 /Users/diegocassandri/DEV/Projetos/Próprios/aoxmoneyApp/aoxmoney-api/src/main/java/com/aox/aoxmoney/api/event/listener/RecursoCriadoListener.java
 /Users/diegocassandri/DEV/Projetos/Próprios/aoxmoneyApp/aoxmoney-api/src/main/java/com/aox/aoxmoney/api/repository/PessoaRepository.java
+/Users/diegocassandri/DEV/Projetos/Próprios/aoxmoneyApp/aoxmoney-api/src/main/java/com/aox/aoxmoney/api/dto/LancamentoEstatisticaPessoa.java
 /Users/diegocassandri/DEV/Projetos/Próprios/aoxmoneyApp/aoxmoney-api/src/main/java/com/aox/aoxmoney/api/resource/TokenResource.java
 /Users/diegocassandri/DEV/Projetos/Próprios/aoxmoneyApp/aoxmoney-api/src/main/java/com/aox/aoxmoney/api/model/Permissao_.java
 /Users/diegocassandri/DEV/Projetos/Próprios/aoxmoneyApp/aoxmoney-api/src/main/java/com/aox/aoxmoney/api/model/Pessoa.java
 /Users/diegocassandri/DEV/Projetos/Próprios/aoxmoneyApp/aoxmoney-api/src/main/java/com/aox/aoxmoney/api/resource/LancamentoResource.java
 /Users/diegocassandri/DEV/Projetos/Próprios/aoxmoneyApp/aoxmoney-api/src/main/java/com/aox/aoxmoney/api/security/ultil/GeradorDeSenha.java
 /Users/diegocassandri/DEV/Projetos/Próprios/aoxmoneyApp/aoxmoney-api/src/main/java/com/aox/aoxmoney/api/model/Lancamento.java
+/Users/diegocassandri/DEV/Projetos/Próprios/aoxmoneyApp/aoxmoney-api/src/main/java/com/aox/aoxmoney/api/dto/LancamentoEstatisticaDia.java
 /Users/diegocassandri/DEV/Projetos/Próprios/aoxmoneyApp/aoxmoney-api/src/main/java/com/aox/aoxmoney/api/config/property/AlgamoneyApiProperty.java
 /Users/diegocassandri/DEV/Projetos/Próprios/aoxmoneyApp/aoxmoney-api/src/main/java/com/aox/aoxmoney/api/model/Pessoa_.java
 /Users/diegocassandri/DEV/Projetos/Próprios/aoxmoneyApp/aoxmoney-api/src/main/java/com/aox/aoxmoney/api/cors/CorsFilter.java

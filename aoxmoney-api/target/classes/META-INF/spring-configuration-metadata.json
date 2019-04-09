@@ -8,6 +8,18 @@
     },
     {
       "sourceType": "com.aox.aoxmoney.api.config.property.AlgamoneyApiProperty",
+      "name": "algamoney.mail",
+      "sourceMethod": "getMail()",
+      "type": "com.aox.aoxmoney.api.config.property.AlgamoneyApiProperty$Mail"
+    },
+    {
+      "sourceType": "com.aox.aoxmoney.api.config.property.AlgamoneyApiProperty",
+      "name": "algamoney.s3",
+      "sourceMethod": "getS3()",
+      "type": "com.aox.aoxmoney.api.config.property.AlgamoneyApiProperty$S3"
+    },
+    {
+      "sourceType": "com.aox.aoxmoney.api.config.property.AlgamoneyApiProperty",
       "name": "algamoney.seguranca",
       "sourceMethod": "getSeguranca()",
       "type": "com.aox.aoxmoney.api.config.property.AlgamoneyApiProperty$Seguranca"
@@ -19,12 +31,6 @@
       "defaultValue": "http:\/\/localhost:4200",
       "name": "algamoney.origin-permitida",
       "type": "java.lang.String"
-    },
-    {
-      "sourceType": "com.aox.aoxmoney.api.config.property.AlgamoneyApiProperty$Seguranca",
-      "defaultValue": false,
-      "name": "algamoney.seguranca.enable-https",
-      "type": "java.lang.Boolean"
     }
   ]
 }
