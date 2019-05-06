@@ -18,6 +18,7 @@ import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada.component'
 import { Title } from '@angular/platform-browser';
 import { AuthService } from '../seguranca/auth.service';
 import { NaoAutorizadoComponent } from './nao-autorizado.component';
+import { DasboardService } from '../dashboard/dasboard.service';
 
 registerLocaleData(localePt, 'pt-BR');
 @NgModule({
@@ -40,6 +41,7 @@ registerLocaleData(localePt, 'pt-BR');
     ErrorHandlerService,
     Title,
     AuthService,
+    DasboardService,
 
     ConfirmationService,
     JwtHelper,
