@@ -1,5 +1,5 @@
 import { LancamentoService } from './../lancamento.service';
-import { ToastyService } from 'ng2-toasty';
+import { MessageService } from 'primeng/components/common/messageservice';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
@@ -34,7 +34,7 @@ export class LancamentoCadastroComponent implements OnInit {
   constructor(private categoriaService: CategoriasService,
     private pessoaService: PessoaService,
     private lancamentoService: LancamentoService,
-    private toasty: ToastyService,
+    private messageService: MessageService,
     private errorHandler: ErrorHandlerService,
     private route: ActivatedRoute,
     private router: Router,
@@ -78,7 +78,7 @@ export class LancamentoCadastroComponent implements OnInit {
   }
 
   erroUpload(event) {
-    this.toasty.error('Erro ao tentar enviar anexo!');
+    this.messageService.add({ severity: 'error', detail: 'Erro ao tentar enviar anexo!'} );
 
     this.uploadEmAndamento = false;
   }
@@ -155,7 +155,7 @@ export class LancamentoCadastroComponent implements OnInit {
   adicionar() {
     this.lancamentoService.salvar(this.formulario.value)
     .then((lancamentoAdicionado) => {
-      this.toasty.success('Lançamento Adicionado com sucesso!');
+      this.messageService.add({ severity: 'success', detail: 'Lançamento Adicionado com sucesso!'} );
 
       this.router.navigate(['/lancamentos', lancamentoAdicionado.codigo]);
     })
@@ -168,7 +168,7 @@ export class LancamentoCadastroComponent implements OnInit {
       // this.lancamento = lancamento;
       this.formulario.patchValue(lancamento);
       this.atualizarTituloEdicao();
-      this.toasty.success('Lançamento Alterado com sucesso!');
+      this.messageService.add({ severity: 'success', detail: 'Lançamento Alterado com sucesso!'} );
 
     })
     .catch(erro => this.errorHandler.handle(erro));

@@ -1,4 +1,4 @@
-import { ToastyService } from 'ng2-toasty';
+import { MessageService } from 'primeng/components/common/messageservice';
 import { Injectable } from '@angular/core';
 import {Response} from '@angular/http';
 import { NotAuthenticatedError } from '../seguranca/money-http';
@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 @Injectable()
 export class ErrorHandlerService {
 
-  constructor(private toasty: ToastyService,
+  constructor(private messageService: MessageService,
     private router: Router) { }
 
   handle(errorResponse: any) {
@@ -42,6 +42,6 @@ export class ErrorHandlerService {
 
 
 
-    this.toasty.error(msg);
+    this.messageService.add({ severity: 'error' , detail: msg});
   }
 }

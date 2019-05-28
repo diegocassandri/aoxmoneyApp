@@ -1,12 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
 body {
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: #404C51;
-  margin: 0;
+}
+
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+a, button {
+  margin-right: 2px;
 }
 
 label {
   font-weight: bold;
+}
+
+.ui-dropdown-filter-container {
+  width: 100%;
 }
 
 @media (min-width: 1200px) {
@@ -16,14 +32,13 @@ label {
   }
 }
 
-a {
-  color: #337ab7;
-  text-decoration: none;
-}
-
 .col-valor {
   width: 120px;
   text-align: right;
+}
+
+.col-valor-header {
+  width: 120px;
 }
 
 .col-data {
@@ -31,11 +46,15 @@ a {
   text-align: center;
 }
 
+.col-data-header {
+  width: 120px;
+}
+
 .col-acoes {
   width: 90px;
   text-align: center;
 }
 
-.ui-dropdown-filter-container {
-  width: 100%;
+.col-acoes-header {
+  width: 90px;
 }
