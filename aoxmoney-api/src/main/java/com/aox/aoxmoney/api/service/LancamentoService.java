@@ -26,10 +26,7 @@ import com.aox.aoxmoney.api.service.exception.PessoaInexistenteOuInativaExceptio
 import java.io.InputStream;
 import java.sql.Date;
 import java.time.LocalDate;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class LancamentoService {
@@ -105,10 +102,12 @@ public class LancamentoService {
 	
 
 	public Lancamento salvar(Lancamento lancamento) {
-		Pessoa pessoa = pessoaRepository.findOne(lancamento.getPessoa().getCodigo());
+		/*Pessoa pessoa = pessoaRepository.findOne(lancamento.getPessoa().getCodigo());
 		if(pessoa == null || pessoa.isInativo()) {
 			throw new PessoaInexistenteOuInativaException();
-		}
+		}*/
+
+		validarPessoa(lancamento);
 
 		if(StringUtils.hasText(lancamento.getAnexo())){
 			s3.salvar(lancamento.getAnexo());
@@ -138,7 +137,7 @@ public class LancamentoService {
 	private void validarPessoa(Lancamento lancamento) {
 		Pessoa pessoa = null;
 		if (lancamento.getPessoa().getCodigo() != null) {
-			pessoa = pessoaRepository.findOne(lancamento.getPessoa().getCodigo());
+			pessoa = pessoaRepository.getOne(lancamento.getPessoa().getCodigo());
 		}
 
 		if (pessoa == null || pessoa.isInativo()) {
@@ -147,11 +146,11 @@ public class LancamentoService {
 	}
 
 	private Lancamento buscarLancamentoExistente(Long codigo) {
-		Lancamento lancamentoSalvo = lancamentoRepository.findOne(codigo);
-		if (lancamentoSalvo == null) {
+		Optional<Lancamento> lancamentoSalvo = lancamentoRepository.findById(codigo);
+		if (!lancamentoSalvo.isPresent()) {
 			throw new IllegalArgumentException();
 		}
-		return lancamentoSalvo;
+		return lancamentoSalvo.get();
 	}
 	
 

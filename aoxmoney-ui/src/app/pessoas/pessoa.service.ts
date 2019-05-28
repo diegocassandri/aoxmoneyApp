@@ -1,7 +1,7 @@
 import { environment } from './../../environments/environment';
 import { URLSearchParams } from '@angular/http';
 import { Injectable } from '@angular/core';
-import { Pessoa } from '../core/model';
+import { Pessoa, Estado, Cidade } from '../core/model';
 import { AuthHttp } from 'angular2-jwt';
 
 
@@ -10,9 +10,13 @@ import { AuthHttp } from 'angular2-jwt';
 export class PessoaService {
 
   pessoasUrl: string;
+  estadosUrl: string;
+  cidadesUrl: string;
 
   constructor(private http: AuthHttp) {
     this.pessoasUrl = `${environment.apiUrl}/pessoas`;
+    this.estadosUrl = `${environment.apiUrl}/estados`;
+    this.cidadesUrl = `${environment.apiUrl}/cidades`;
   }
 
   pesquisar(filtro: PessoasFiltro):  Promise<any> {
@@ -74,6 +78,19 @@ export class PessoaService {
     .toPromise()
     .then(response => response.json());
   }
+
+  listarEstados(): Promise<Estado[]> {
+    return this.http.get(this.estadosUrl).toPromise().then(response => response.json());
+  }
+
+  pesquisarCidades(estado): Promise<Cidade[]> {
+    const params = new URLSearchParams;
+    params.set('estado',estado);
+    return this.http.get(this.cidadesUrl,{ search: params})
+         .toPromise()
+         .then(response => response.json());
+  }
+  
 
 }
 

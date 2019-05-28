@@ -61,7 +61,7 @@ public class S3 {
     }
 
     public String configurarUrl(String objeto) {
-        return "\\\\" + "s3.amazonaws.com/" +  property.getS3().getBucket() + "/"  + objeto;
+        return "https:" + "s3.amazonaws.com/" +  property.getS3().getBucket() + "/"  + objeto;
     }
 
     private String gerarNomeUnico(String originalFilename) {

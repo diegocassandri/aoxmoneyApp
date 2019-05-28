@@ -1,6 +1,8 @@
 package com.aox.aoxmoney.api.model;
 
 import javax.persistence.Embeddable;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Embeddable
 public class Endereco {
@@ -12,10 +14,10 @@ public class Endereco {
 	private String bairro;
 	
 	private String cep;
-	
-	private String cidade;
-	
-	private String estado;
+
+	@ManyToOne
+	@JoinColumn(name="codigo_cidade")
+	private Cidade cidade;
 
 	private String complemento;
 
@@ -51,22 +53,6 @@ public class Endereco {
 		this.cep = cep;
 	}
 
-	public String getCidade() {
-		return cidade;
-	}
-
-	public void setCidade(String cidade) {
-		this.cidade = cidade;
-	}
-
-	public String getEstado() {
-		return estado;
-	}
-
-	public void setEstado(String estado) {
-		this.estado = estado;
-	}
-
 
     public String getComplemento() {
         return complemento;
@@ -75,4 +61,12 @@ public class Endereco {
     public void setComplemento(String complemento) {
         this.complemento = complemento;
     }
+
+	public Cidade getCidade() {
+		return cidade;
+	}
+
+	public void setCidade(Cidade cidade) {
+		this.cidade = cidade;
+	}
 }

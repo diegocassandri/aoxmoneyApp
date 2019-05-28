@@ -19,6 +19,7 @@ import { Title } from '@angular/platform-browser';
 import { AuthService } from '../seguranca/auth.service';
 import { NaoAutorizadoComponent } from './nao-autorizado.component';
 import { DasboardService } from '../dashboard/dasboard.service';
+import { RelatoriosService} from '../relatorios/relatorios.service';
 
 registerLocaleData(localePt, 'pt-BR');
 @NgModule({
@@ -42,6 +43,7 @@ registerLocaleData(localePt, 'pt-BR');
     Title,
     AuthService,
     DasboardService,
+    RelatoriosService,
 
     ConfirmationService,
     JwtHelper,

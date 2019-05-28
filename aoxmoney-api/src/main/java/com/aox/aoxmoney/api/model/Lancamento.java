@@ -19,7 +19,7 @@ public class Lancamento {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long codigo;
-	
+
 	@NotNull
 	private String descricao;
 
@@ -56,8 +56,8 @@ public class Lancamento {
 	private String urlAnexo;
 
 	@JsonIgnore
-	public boolean isReceita(){
-		return TipoLancamento.RECEITA.equals(this.tipo);
+	public boolean isReceita() {
+		return TipoLancamento.RECEITA.equals(tipo);
 	}
 
 	public Long getCodigo() {

@@ -1,9 +1,328 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a056ad86-201f-4ebf-bb18-832453f3df99" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    <list default="true" id="bd4fa527-c16d-49c0-a849-4b0f689a4fbd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/config/OAuthSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/model/Cidade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/model/Estado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/repository/CidadeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/repository/EstadoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/resource/CidadeResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/resource/EstadoResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V08__criar_e_registrar_cidade_estado.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_acm_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_alexaforbusiness_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_api_gateway_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_applicationautoscaling_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_appstream_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_appsync_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_athena_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_autoscaling_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_autoscalingplans_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_batch_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_budgets_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_cloud9_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_clouddirectory_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_cloudformation_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_cloudfront_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_cloudhsm_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_cloudhsmv2_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_cloudsearch_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_cloudtrail_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_cloudwatch_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_cloudwatchmetrics_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_codebuild_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_codecommit_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_codedeploy_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_codepipeline_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_codestar_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_cognitoidentity_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_cognitoidp_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_cognitosync_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_comprehend_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_config_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_core_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_costandusagereport_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_costexplorer_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_datapipeline_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_dax_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_devicefarm_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_directconnect_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_directory_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_discovery_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_dms_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_dynamodb_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_ec2_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_ecr_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_ecs_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_efs_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_elasticache_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_elasticbeanstalk_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_elasticloadbalancing_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_elasticloadbalancingv2_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_elasticsearch_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_elastictranscoder_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_emr_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_events_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_gamelift_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_glacier_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_glue_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_greengrass_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_guardduty_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_health_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_iam_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_importexport_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_inspector_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_iot_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_iotjobsdataplane_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_kinesis_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_kinesisvideo_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_kms_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_lambda_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_lex_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_lexmodelbuilding_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_lightsail_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_logs_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_machinelearning_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_marketplacecommerceanalytics_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_marketplaceentitlement_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_marketplacemeteringservice_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_mechanicalturkrequester_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_mediaconvert_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_medialive_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_mediapackage_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_mediastore_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_mediastoredata_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_migrationhub_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_mobile_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_models_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_mq_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_opsworks_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_opsworkscm_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_organizations_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_pinpoint_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_polly_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_pricing_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_rds_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_redshift_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_rekognition_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_resourcegroups_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_resourcegroupstaggingapi_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_route53_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_s3_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_sagemaker_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_sagemakerruntime_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_serverlessapplicationrepository_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_servermigration_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_servicecatalog_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_servicediscovery_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_ses_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_shield_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_simpledb_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_simpleworkflow_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_snowball_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_sns_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_sqs_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_ssm_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_stepfunctions_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_storagegateway_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_sts_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_support_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_swf_libraries_1_11_22.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_transcribe_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_translate_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_waf_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_workdocs_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_workmail_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_workspaces_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_xray_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_jmespath_java_1_11_274.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_cbor_2_8_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_8_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_zxing_core_3_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_ibm_icu_icu4j_57_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_lowagie_itext_2_1_7_js6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_5_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_digester_commons_digester_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_17_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_17_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_17_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_17_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_17_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_17_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_17_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_regexp_jakarta_regexp_1_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_stream_stax_api_1_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_9_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_45.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jasperreports_jasperreports_6_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jasperreports_jasperreports_fonts_6_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jasperreports_jasperreports_functions_6_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__nz_net_ultraq_thymeleaf_thymeleaf_expression_processor_1_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__nz_net_ultraq_thymeleaf_thymeleaf_layout_dialect_2_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ognl_ognl_3_1_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_analyzers_common_4_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_core_4_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_queries_4_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_queryparser_4_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_sandbox_4_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_27.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_27.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_27.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_annotations_api_8_5_27.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_jdbc_8_5_27.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_juli_8_5_27.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_2_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_4_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_56.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_56.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_castor_castor_core_1_3_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_castor_castor_xml_1_3_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_groovy_groovy_2_4_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jdt_core_compiler_ecj_4_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_flywaydb_flyway_core_3_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_0_12_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_5_0_12_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_java8_5_0_12_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_3_6_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_21_0_GA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jfree_jcommon_1_0_23.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jfree_jfreechart_1_0_19.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_1_10_19.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_olap4j_olap4j_0_9_7_309_JS_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_5_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_5_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_configuration_processor_1_5_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_1_5_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_5_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_1_5_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_1_5_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_1_5_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_5_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_mail_1_5_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_1_5_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_1_5_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_1_5_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_5_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_5_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_1_5_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_1_5_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_13_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_1_11_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_oauth_spring_security_oauth2_2_0_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_4_2_4_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_4_2_4_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_jwt_1_0_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_4_2_4_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_4_3_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_3_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_3_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_3_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_14_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring4_3_0_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__software_amazon_ion_ion_java_1_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aoxmoney-api.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/config/AuthorizationServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/config/AuthorizationServerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/config/ResourceServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/config/ResourceServerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/model/Endereco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/model/Endereco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/model/Lancamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/model/Lancamento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/resource/CategoriaResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/resource/CategoriaResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/resource/LancamentoResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/resource/LancamentoResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/resource/PessoaResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/resource/PessoaResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/service/LancamentoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/service/LancamentoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/service/PessoaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/service/PessoaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/storage/S3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/storage/S3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V07__coluna_anexo_tb_lancamento.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V07__coluna_anexo_tb_lancamento.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/aoxmoney-api.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aoxmoney-ui/.angular-cli.json" beforeDir="false" afterPath="$PROJECT_DIR$/../aoxmoney-ui/.angular-cli.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aoxmoney-ui/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../aoxmoney-ui/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aoxmoney-ui/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../aoxmoney-ui/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aoxmoney-ui/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../aoxmoney-ui/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aoxmoney-ui/src/app/core/core.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../aoxmoney-ui/src/app/core/core.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aoxmoney-ui/src/app/core/model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../aoxmoney-ui/src/app/core/model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aoxmoney-ui/src/app/core/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../aoxmoney-ui/src/app/core/navbar/navbar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aoxmoney-ui/src/app/dashboard/dasboard.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../aoxmoney-ui/src/app/dashboard/dasboard.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aoxmoney-ui/src/app/dashboard/dashboard.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../aoxmoney-ui/src/app/dashboard/dashboard.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aoxmoney-ui/src/app/dashboard/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../aoxmoney-ui/src/app/dashboard/dashboard/dashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aoxmoney-ui/src/app/dashboard/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../aoxmoney-ui/src/app/dashboard/dashboard/dashboard.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aoxmoney-ui/src/app/lancamentos/lancamento-cadastro/lancamento-cadastro.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../aoxmoney-ui/src/app/lancamentos/lancamento-cadastro/lancamento-cadastro.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aoxmoney-ui/src/app/lancamentos/lancamento-cadastro/lancamento-cadastro.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../aoxmoney-ui/src/app/lancamentos/lancamento-cadastro/lancamento-cadastro.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aoxmoney-ui/src/app/lancamentos/lancamento.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../aoxmoney-ui/src/app/lancamentos/lancamento.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aoxmoney-ui/src/app/lancamentos/lancamentos.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../aoxmoney-ui/src/app/lancamentos/lancamentos.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aoxmoney-ui/src/app/pessoas/pessoa-cadastro/pessoa-cadastro.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../aoxmoney-ui/src/app/pessoas/pessoa-cadastro/pessoa-cadastro.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aoxmoney-ui/src/app/pessoas/pessoa-cadastro/pessoa-cadastro.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aoxmoney-ui/src/app/pessoas/pessoa-cadastro/pessoa-cadastro.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../aoxmoney-ui/src/app/pessoas/pessoa-cadastro/pessoa-cadastro.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aoxmoney-ui/src/app/pessoas/pessoa-pesquisa/pessoa-pesquisa.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../aoxmoney-ui/src/app/pessoas/pessoa-pesquisa/pessoa-pesquisa.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aoxmoney-ui/src/app/pessoas/pessoa.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../aoxmoney-ui/src/app/pessoas/pessoa.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aoxmoney-ui/src/app/pessoas/pessoas.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../aoxmoney-ui/src/app/pessoas/pessoas.module.ts" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,36 +330,32 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/aoxmoney_api$AoxmoneyApiApplication.ic" NAME="AoxmoneyApiApplication Coverage Results" MODIFIED="1550618921372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.aox.aoxmoney.api.*</FILTER>
-    </SUITE>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/AoxmoneyApiApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="17">
+              <caret line="1" column="22" lean-forward="true" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="100" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application-prod.properties">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/config/AuthorizationServerConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="36" />
+            <state relative-caret-position="374">
+              <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3026#3027#0" expanded="true" />
+                <element signature="e#3081#3082#0" expanded="true" />
+                <element signature="e#3129#3130#0" expanded="true" />
+                <element signature="e#3168#3169#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,32 +363,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/resource/LancamentoResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/storage/S3.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="88" column="39" selection-start-line="88" selection-start-column="39" selection-end-line="88" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/repository/listener/LancamentoAnexoListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="357">
+              <caret line="132" column="65" lean-forward="true" selection-start-line="132" selection-start-column="65" selection-end-line="132" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -81,8 +372,56 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/model/Lancamento.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+            <state relative-caret-position="603">
+              <caret line="175" column="1" selection-start-line="175" selection-start-column="1" selection-end-line="175" selection-end-column="1" />
+              <folding>
+                <element signature="e#1192#1193#0" expanded="true" />
+                <element signature="e#1241#1242#0" expanded="true" />
+                <element signature="e#1269#1270#0" expanded="true" />
+                <element signature="e#1289#1290#0" expanded="true" />
+                <element signature="e#1328#1329#0" expanded="true" />
+                <element signature="e#1355#1356#0" expanded="true" />
+                <element signature="e#1388#1389#0" expanded="true" />
+                <element signature="e#1411#1412#0" expanded="true" />
+                <element signature="e#1458#1459#0" expanded="true" />
+                <element signature="e#1491#1492#0" expanded="true" />
+                <element signature="e#1532#1533#0" expanded="true" />
+                <element signature="e#1560#1561#0" expanded="true" />
+                <element signature="e#1620#1621#0" expanded="true" />
+                <element signature="e#1663#1664#0" expanded="true" />
+                <element signature="e#1703#1704#0" expanded="true" />
+                <element signature="e#1730#1731#0" expanded="true" />
+                <element signature="e#1788#1789#0" expanded="true" />
+                <element signature="e#1829#1830#0" expanded="true" />
+                <element signature="e#1862#1863#0" expanded="true" />
+                <element signature="e#1881#1882#0" expanded="true" />
+                <element signature="e#1924#1925#0" expanded="true" />
+                <element signature="e#1949#1950#0" expanded="true" />
+                <element signature="e#1983#1984#0" expanded="true" />
+                <element signature="e#2007#2008#0" expanded="true" />
+                <element signature="e#2056#2057#0" expanded="true" />
+                <element signature="e#2091#2092#0" expanded="true" />
+                <element signature="e#2127#2128#0" expanded="true" />
+                <element signature="e#2145#2146#0" expanded="true" />
+                <element signature="e#2190#2191#0" expanded="true" />
+                <element signature="e#2213#2214#0" expanded="true" />
+                <element signature="e#2249#2250#0" expanded="true" />
+                <element signature="e#2272#2273#0" expanded="true" />
+                <element signature="e#2322#2323#0" expanded="true" />
+                <element signature="e#2355#2356#0" expanded="true" />
+                <element signature="e#2385#2386#0" expanded="true" />
+                <element signature="e#2405#2406#0" expanded="true" />
+                <element signature="e#2446#2447#0" expanded="true" />
+                <element signature="e#2473#2474#0" expanded="true" />
+                <element signature="e#2502#2503#0" expanded="true" />
+                <element signature="e#2521#2522#0" expanded="true" />
+                <element signature="e#2560#2561#0" expanded="true" />
+                <element signature="e#2585#2586#0" expanded="true" />
+                <element signature="e#2617#2618#0" expanded="true" />
+                <element signature="e#2639#2640#0" expanded="true" />
+                <element signature="e#2684#2685#0" expanded="true" />
+                <element signature="e#2715#2716#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,13 +429,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/service/LancamentoService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1500">
-              <caret line="129" column="77" selection-start-line="129" selection-start-column="77" selection-end-line="129" selection-end-column="77" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="297">
+              <caret line="143" column="60" lean-forward="true" selection-start-line="143" selection-start-column="60" selection-end-line="143" selection-end-column="60" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application-prod.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V07__coluna_anexo_tb_lancamento.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="36" lean-forward="true" selection-start-column="36" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V06__criar_tabela_contato.sql">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V08__criar_e_registrar_cidade_estado.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="14" column="53" lean-forward="true" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V03__criar_tabela_e_registrar_lancamentos.sql">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -108,49 +481,39 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>validarPessoa</find>
+      <find>authenticationManager</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/repository/filter/LancamentoFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/model/Endereco.java" />
-        <option value="$PROJECT_DIR$/Procfile" />
-        <option value="$PROJECT_DIR$/src/main/resources/application-prod.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/config/AuthorizationServerConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/dto/LancamentoEstatisticaCategoria.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/dto/LancamentoEstatisticaDia.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/dto/LancamentoEstatisticaPessoa.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/model/TipoLancamento.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/repository/lancamento/LancamentoRepositoryQuery.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/repository/lancamento/LancamentoRepositoryImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/config/WebConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mail/Mailer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/config/MailConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/mail/aviso-lancamentos-vencidos.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/repository/LancamentoRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/repository/UsuarioRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/mail/Mailer.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V04__criar_e_registar_usuarios_e_permissoes.sql" />
-        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V05__novo_usuario.sql" />
-        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V06__criar_tabela_contato.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/model/Contato.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/resource/PessoaResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/model/Pessoa.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/service/PessoaService.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/config/property/AlgamoneyApiProperty.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/config/S3Config.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/dto/Anexo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/resource/LancamentoResource.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V07__coluna_anexo_tb_lancamento.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/service/LancamentoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/storage/S3.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/AoxmoneyApiApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/repository/listener/LancamentoAnexoListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/model/Lancamento.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/model/Estado.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/model/Cidade.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/model/Endereco.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V08__criar_e_registrar_cidade_estado.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/repository/EstadoRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/resource/EstadoResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/repository/CidadeRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/resource/CidadeResource.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/service/PessoaService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/resource/CategoriaResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/resource/PessoaResource.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/config/OAuthSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/config/ResourceServerConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/config/AuthorizationServerConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/model/Lancamento.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/resource/LancamentoResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/service/LancamentoService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V07__coluna_anexo_tb_lancamento.sql" />
       </list>
     </option>
   </component>
@@ -161,36 +524,18 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="aoxmoney-api" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="aoxmoney-api" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="68" />
+    <option name="y" value="-8" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="826" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -240,16 +585,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aoxmoney-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aoxmoney-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="aoxmoney-api" type="b2602c69:ProjectViewProjectNode" />
@@ -258,27 +594,26 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="aoxmoney-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aoxmoney-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="migration" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557189651091" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.aox.aoxmoney.api" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/db/migration" />
-      <recent name="$PROJECT_DIR$/src/main/resources/relatorios" />
-      <recent name="$PROJECT_DIR$/docs/relatorios" />
-    </key>
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -293,52 +628,15 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="Applet">
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AoxmoneyApiApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.aox.aoxmoney.api.AoxmoneyApiApplication" />
       <module name="aoxmoney-api" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.aox.aoxmoney.api.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="TestNG">
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file enabled="true" id="idea.log" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -354,321 +652,155 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a056ad86-201f-4ebf-bb18-832453f3df99" name="Default" comment="" />
-      <created>1539362489277</created>
+      <changelist id="bd4fa527-c16d-49c0-a849-4b0f689a4fbd" name="Default Changelist" comment="" />
+      <created>1557190028547</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1539362489277</updated>
+      <updated>1557190028547</updated>
     </task>
-    <task id="LOCAL-00001" summary="Implementação frontEnd.">
-      <created>1541549888190</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1541549888190</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="826" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.40128756" />
-      <window_info id="Structure" order="1" weight="0.24964234" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25906184" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="DB Browser" order="7" />
-      <window_info id="Project Explorer" order="8" weight="0.32960597" />
-      <window_info id="Job Explorer" order="9" weight="0.32960597" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3287858" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.373297" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39111593" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32780612" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.20980926" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32967034" />
-      <window_info anchor="bottom" id="DB Execution Console" order="11" />
-      <window_info anchor="bottom" id="Console" order="12" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.16359697" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" weight="0.16452074" />
-      <window_info anchor="right" id="Maven" order="8" weight="0.3297568" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implementação frontEnd." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementação frontEnd." />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/token/RefreshTokenCookiePreProcessorFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/token/RefreshTokenPostProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/resource/CategoriaResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/config/AuthorizationServerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="48" selection-start-column="48" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/config/BasicSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/config/ResourceServerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/cors/CorsFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/dto/LancamentoEstatisticaDia.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
-            <element signature="e#567#568#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-            <element signature="e#632#633#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#699#700#0" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#765#766#0" expanded="true" />
-            <element signature="e#793#794#0" expanded="true" />
-            <element signature="e#839#840#0" expanded="true" />
-            <element signature="e#873#874#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/dto/LancamentoEstatisticaCategoria.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#418#419#0" expanded="true" />
-            <element signature="e#450#451#0" expanded="true" />
-            <element signature="e#503#504#0" expanded="true" />
-            <element signature="e#545#546#0" expanded="true" />
-            <element signature="e#581#582#0" expanded="true" />
-            <element signature="e#609#610#0" expanded="true" />
-            <element signature="e#655#656#0" expanded="true" />
-            <element signature="e#689#690#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/dto/LancamentoEstatisticaPessoa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#344#345#0" expanded="true" />
-            <element signature="e#371#372#0" expanded="true" />
-            <element signature="e#419#420#0" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#484#485#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#557#558#0" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
-            <element signature="e#629#630#0" expanded="true" />
-            <element signature="e#657#658#0" expanded="true" />
-            <element signature="e#703#704#0" expanded="true" />
-            <element signature="e#737#738#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/model/TipoLancamento.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding>
-            <element signature="e#214#215#0" expanded="true" />
-            <element signature="e#249#250#0" expanded="true" />
-            <element signature="e#272#273#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/relatorios/LancamentosPorPessoa.jrxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="74" lean-forward="true" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context-support/4.3.14.RELEASE/spring-context-support-4.3.14.RELEASE.jar!/org/springframework/mail/javamail/JavaMailSender.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context-support/4.3.14.RELEASE/spring-context-support-4.3.14.RELEASE.jar!/org/springframework/mail/javamail/MimeMessageHelper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7309">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/config/WebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context-support/4.3.14.RELEASE/spring-context-support-4.3.14.RELEASE.jar!/org/springframework/mail/javamail/JavaMailSenderImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="238" selection-start-line="238" selection-end-line="238" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/config/MailConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/src.zip!/java/util/function/Consumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mail/aviso-lancamentos-vencidos.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="11" lean-forward="true" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tr#0;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/model/Lancamento_.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/repository/lancamento/LancamentoRepositoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="91" selection-start-line="91" selection-end-line="91" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/repository/lancamento/LancamentoRepositoryQuery.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/config/property/AlgamoneyApiProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="119" column="22" selection-start-line="119" selection-start-column="22" selection-end-line="119" selection-end-column="22" />
+          <folding>
+            <element signature="e#2066#2067#0" expanded="true" />
+            <element signature="e#2088#2089#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/dto/Anexo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/storage/S3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="62" column="18" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/model/Endereco.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1069#1070#0" expanded="true" />
+            <element signature="e#1089#1090#0" expanded="true" />
+            <element signature="e#1130#1131#0" expanded="true" />
+            <element signature="e#1157#1158#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/repository/UsuarioRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/model/Estado.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#281#282#0" expanded="true" />
+            <element signature="e#310#311#0" expanded="true" />
+            <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
+            <element signature="e#464#465#0" expanded="true" />
+            <element signature="e#504#505#0" expanded="true" />
+            <element signature="e#536#537#0" expanded="true" />
+            <element signature="e#700#701#0" expanded="true" />
+            <element signature="e#743#744#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V05__novo_usuario.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/model/Cidade.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="79" lean-forward="true" selection-start-line="16" selection-start-column="79" selection-end-line="16" selection-end-column="79" />
+        <state relative-caret-position="204">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#314#315#0" expanded="true" />
+            <element signature="e#343#344#0" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#479#480#0" expanded="true" />
+            <element signature="e#519#520#0" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#584#585#0" expanded="true" />
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
+            <element signature="e#693#694#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
+            <element signature="e#1048#1049#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V04__criar_e_registar_usuarios_e_permissoes.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/repository/CategoriaRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="68">
+          <caret line="6" column="74" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="74" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/repository/LancamentoRepository.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/1.11.10.RELEASE/spring-data-jpa-1.11.10.RELEASE-sources.jar!/org/springframework/data/jpa/repository/JpaRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="198">
+          <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/mail/Mailer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/repository/EstadoRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -677,213 +809,237 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/repository/PessoaRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        <state relative-caret-position="68">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/model/Contato.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/resource/EstadoResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#648#649#0" expanded="true" />
-            <element signature="e#677#678#0" expanded="true" />
-            <element signature="e#719#720#0" expanded="true" />
-            <element signature="e#755#756#0" expanded="true" />
-            <element signature="e#786#787#0" expanded="true" />
-            <element signature="e#813#814#0" expanded="true" />
-            <element signature="e#853#854#0" expanded="true" />
-            <element signature="e#885#886#0" expanded="true" />
-            <element signature="e#917#918#0" expanded="true" />
-            <element signature="e#945#946#0" expanded="true" />
-            <element signature="e#987#988#0" expanded="true" />
-            <element signature="e#1021#1022#0" expanded="true" />
-            <element signature="e#1056#1057#0" expanded="true" />
-            <element signature="e#1087#1088#0" expanded="true" />
-            <element signature="e#1135#1136#0" expanded="true" />
-            <element signature="e#1175#1176#0" expanded="true" />
-            <element signature="e#1208#1209#0" expanded="true" />
-            <element signature="e#1237#1238#0" expanded="true" />
-            <element signature="e#1281#1282#0" expanded="true" />
-            <element signature="e#1317#1318#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/model/Pessoa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
-          <folding>
-            <element signature="e#1073#1074#0" expanded="true" />
-            <element signature="e#1095#1096#0" expanded="true" />
-            <element signature="e#1147#1148#0" expanded="true" />
-            <element signature="e#1178#1179#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/service/PessoaService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/model/Categoria.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-28">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.14.RELEASE/spring-context-4.3.14.RELEASE.jar!/org/springframework/context/ApplicationEventPublisher.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/event/listener/RecursoCriadoListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/event/RecursoCriadoEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/resource/PessoaResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="80" column="45" selection-start-line="80" selection-start-column="45" selection-end-line="80" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/config/S3Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="33" column="46" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+        <state relative-caret-position="204">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/config/property/AlgamoneyApiProperty.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/resource/CidadeResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="100" column="33" selection-start-line="100" selection-start-column="33" selection-end-line="100" selection-end-column="51" />
+        <state relative-caret-position="136">
+          <caret line="8" column="62" selection-start-line="8" selection-start-column="62" selection-end-line="9" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/repository/CidadeRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
           <folding>
-            <element signature="e#408#409#0" expanded="true" />
-            <element signature="e#424#425#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2055">
-          <caret line="137" selection-start-line="137" selection-end-line="137" />
+        <state relative-caret-position="187">
+          <caret line="29" column="80" selection-start-line="29" selection-start-column="80" selection-end-line="29" selection-end-column="80" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V06__criar_tabela_contato.sql">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.0.7.RELEASE/spring-data-commons-2.0.7.RELEASE.jar!/org/springframework/data/repository/query/QueryByExampleExecutor.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+        <state relative-caret-position="442">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V07__coluna_anexo_tb_lancamento.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/service/PessoaService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="53" lean-forward="true" selection-start-column="53" selection-end-column="53" />
+        <state relative-caret-position="408">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/dto/Anexo.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.0.7.RELEASE/spring-data-commons-2.0.7.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        <state relative-caret-position="408">
+          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/resource/CategoriaResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/resource/PessoaResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.0.5.RELEASE/spring-security-config-5.0.5.RELEASE.jar!/org/springframework/security/config/annotation/web/configuration/WebSecurityConfigurerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="125" column="36" selection-start-line="125" selection-start-column="36" selection-end-line="125" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/config/OAuthSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
           <folding>
-            <element signature="e#237#238#0" expanded="true" />
-            <element signature="e#264#265#0" expanded="true" />
-            <element signature="e#294#295#0" expanded="true" />
-            <element signature="e#320#321#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1371#1372#0" expanded="true" />
+            <element signature="e#1421#1422#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/config/ResourceServerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="75" lean-forward="true" selection-start-line="16" selection-start-column="75" selection-end-line="16" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/AoxmoneyApiApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="306">
           <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application-prod.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/config/AuthorizationServerConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/resource/LancamentoResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/storage/S3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="88" column="39" selection-start-line="88" selection-start-column="39" selection-end-line="88" selection-end-column="39" />
+        <state relative-caret-position="374">
+          <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/repository/listener/LancamentoAnexoListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#3026#3027#0" expanded="true" />
+            <element signature="e#3081#3082#0" expanded="true" />
+            <element signature="e#3129#3130#0" expanded="true" />
+            <element signature="e#3168#3169#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/model/Lancamento.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+        <state relative-caret-position="603">
+          <caret line="175" column="1" selection-start-line="175" selection-start-column="1" selection-end-line="175" selection-end-column="1" />
+          <folding>
+            <element signature="e#1192#1193#0" expanded="true" />
+            <element signature="e#1241#1242#0" expanded="true" />
+            <element signature="e#1269#1270#0" expanded="true" />
+            <element signature="e#1289#1290#0" expanded="true" />
+            <element signature="e#1328#1329#0" expanded="true" />
+            <element signature="e#1355#1356#0" expanded="true" />
+            <element signature="e#1388#1389#0" expanded="true" />
+            <element signature="e#1411#1412#0" expanded="true" />
+            <element signature="e#1458#1459#0" expanded="true" />
+            <element signature="e#1491#1492#0" expanded="true" />
+            <element signature="e#1532#1533#0" expanded="true" />
+            <element signature="e#1560#1561#0" expanded="true" />
+            <element signature="e#1620#1621#0" expanded="true" />
+            <element signature="e#1663#1664#0" expanded="true" />
+            <element signature="e#1703#1704#0" expanded="true" />
+            <element signature="e#1730#1731#0" expanded="true" />
+            <element signature="e#1788#1789#0" expanded="true" />
+            <element signature="e#1829#1830#0" expanded="true" />
+            <element signature="e#1862#1863#0" expanded="true" />
+            <element signature="e#1881#1882#0" expanded="true" />
+            <element signature="e#1924#1925#0" expanded="true" />
+            <element signature="e#1949#1950#0" expanded="true" />
+            <element signature="e#1983#1984#0" expanded="true" />
+            <element signature="e#2007#2008#0" expanded="true" />
+            <element signature="e#2056#2057#0" expanded="true" />
+            <element signature="e#2091#2092#0" expanded="true" />
+            <element signature="e#2127#2128#0" expanded="true" />
+            <element signature="e#2145#2146#0" expanded="true" />
+            <element signature="e#2190#2191#0" expanded="true" />
+            <element signature="e#2213#2214#0" expanded="true" />
+            <element signature="e#2249#2250#0" expanded="true" />
+            <element signature="e#2272#2273#0" expanded="true" />
+            <element signature="e#2322#2323#0" expanded="true" />
+            <element signature="e#2355#2356#0" expanded="true" />
+            <element signature="e#2385#2386#0" expanded="true" />
+            <element signature="e#2405#2406#0" expanded="true" />
+            <element signature="e#2446#2447#0" expanded="true" />
+            <element signature="e#2473#2474#0" expanded="true" />
+            <element signature="e#2502#2503#0" expanded="true" />
+            <element signature="e#2521#2522#0" expanded="true" />
+            <element signature="e#2560#2561#0" expanded="true" />
+            <element signature="e#2585#2586#0" expanded="true" />
+            <element signature="e#2617#2618#0" expanded="true" />
+            <element signature="e#2639#2640#0" expanded="true" />
+            <element signature="e#2684#2685#0" expanded="true" />
+            <element signature="e#2715#2716#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/resource/LancamentoResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="132" column="65" lean-forward="true" selection-start-line="132" selection-start-column="65" selection-end-line="132" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/aox/aoxmoney/api/service/LancamentoService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1500">
-          <caret line="129" column="77" selection-start-line="129" selection-start-column="77" selection-end-line="129" selection-end-column="77" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="297">
+          <caret line="143" column="60" lean-forward="true" selection-start-line="143" selection-start-column="60" selection-end-line="143" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="107" selection-start-column="107" selection-end-column="107" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="17">
+          <caret line="1" column="22" lean-forward="true" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V03__criar_tabela_e_registrar_lancamentos.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V08__criar_e_registrar_cidade_estado.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="14" column="53" lean-forward="true" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V06__criar_tabela_contato.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V07__coluna_anexo_tb_lancamento.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="36" lean-forward="true" selection-start-column="36" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-prod.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -892,18 +1048,7 @@
     <states>
       <state key="ProjectJDKs.UI">
         <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
+          <last-edited>11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

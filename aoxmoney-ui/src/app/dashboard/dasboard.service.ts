@@ -16,14 +16,14 @@ export class DasboardService {
 
   lancamentosPorCategoria(): Promise<Array<any>> {
 
-    return this.http.get(`${this.lancamentosUrl}/estatisticcas/por-categoria`)
+    return this.http.get(`${this.lancamentosUrl}/estatistica/por-categoria`)
     .toPromise()
     .then(response => response.json());
   }
 
   lancamentosPorDia(): Promise<Array<any>> {
 
-    return this.http.get(`${this.lancamentosUrl}/estatisticcas/por-dia`)
+    return this.http.get(`${this.lancamentosUrl}/estatistica/por-dia`)
     .toPromise()
     .then(response => {
       const dados = response.json();

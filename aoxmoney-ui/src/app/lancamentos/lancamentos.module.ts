@@ -11,6 +11,8 @@ import { TooltipModule } from 'primeng/components/tooltip/tooltip';
 import { DataTableModule } from 'primeng/components/datatable/datatable';
 import { ButtonModule } from 'primeng/components/button/button';
 import { InputTextModule } from 'primeng/components/inputtext/inputtext';
+import { FileUploadModule } from "primeng/fileupload";
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
 
 import { LancamentoPesquisaComponent } from './lancamento-pesquisa/lancamento-pesquisa.component';
 import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
@@ -34,7 +36,9 @@ import { LancamentosRoutingModule } from './lancamento-routing.module';
     SelectButtonModule,
     DropdownModule,
     CurrencyMaskModule,
-    LancamentosRoutingModule
+    LancamentosRoutingModule,
+    FileUploadModule,
+    ProgressSpinnerModule
   ],
   declarations: [
     LancamentoCadastroComponent,

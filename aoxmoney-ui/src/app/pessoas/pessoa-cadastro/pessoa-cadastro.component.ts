@@ -1,12 +1,15 @@
 import { Component, OnInit, } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
-import { Pessoa } from '../../core/model';
+import { Pessoa, Contato } from '../../core/model';
 import { ErrorHandlerService } from './../../core/error-handler.service';
 import { ToastyService } from 'ng2-toasty';
 import { PessoaService } from './../pessoa.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { identifierModuleUrl } from '@angular/compiler';
+
+
 
 @Component({
   selector: 'app-pessoa-cadastro',
@@ -16,6 +19,9 @@ import { Title } from '@angular/platform-browser';
 export class PessoaCadastroComponent implements OnInit {
 
   pessoa = new Pessoa();
+  estados: any[];
+  cidades: any[];
+  estadoSelecionado: number;
 
   constructor(private pessoaService: PessoaService,
     private errorHandler: ErrorHandlerService,
@@ -29,19 +35,46 @@ export class PessoaCadastroComponent implements OnInit {
 
     const codigo = this.route.snapshot.params['codigo'];
 
+    this.carregarEstados();
+
     if (codigo) {
       this.buscaPessoa(codigo);
     }
   }
 
+ 
+
   buscaPessoa(codigo: number) {
     this.pessoaService.buscaPorCodigo(codigo)
     .then(pessoa => {
       this.pessoa = pessoa;
+
+      this.estadoSelecionado = (this.pessoa.endereco.cidade) ? this.pessoa.endereco.cidade.estado.codigo : null;
+
+      if(this.estadoSelecionado){
+        this.carregarCidades();
+      }
+
       this.atualizarTituloEdicao();
     })
     .catch(erro => this.errorHandler.handle(erro));
   }
+
+carregarEstados() {
+  this.pessoaService.listarEstados()
+  .then(lista => {
+    this.estados = lista.map(uf => ({label: uf.nome, value: uf.codigo}));
+  })
+  .catch(erro => this.errorHandler.handle(erro));
+}
+
+carregarCidades() {
+  this.pessoaService.pesquisarCidades(this.estadoSelecionado)
+  .then(lista => {
+    this.cidades = lista.map(c => ({label: c.nome, value: c.codigo}));
+  })
+  .catch(erro => this.errorHandler.handle(erro));
+}
 
   get editando() {
     return Boolean(this.pessoa.codigo);
