@@ -1,6 +1,6 @@
 import { MessageService } from 'primeng/components/common/messageservice';
 import { Injectable } from '@angular/core';
-import {Response} from '@angular/http';
+import {HttpErrorResponse} from '@angular/common/http';
 import { NotAuthenticatedError } from '../seguranca/money-http';
 import { Router } from '@angular/router';
 
@@ -19,8 +19,7 @@ export class ErrorHandlerService {
       msg = 'Sua sessão expirou!';
       this.router.navigate(['/login']);
 
-    }  else if (errorResponse instanceof Response && errorResponse.status >= 400 && errorResponse.status <= 499) {
-      let errors;
+    }  else if (errorResponse instanceof HttpErrorResponse && errorResponse.status >= 400 && errorResponse.status <= 499) {
       msg = 'Ocorreu um erro ao processar a requisição.';
 
       if (errorResponse.status === 403) {
@@ -28,8 +27,7 @@ export class ErrorHandlerService {
       }
 
       try {
-        errors = errorResponse.json();
-        msg = errors[0].mensagemUsuario;
+        msg = errorResponse.error[0].mensagemUsuario;
       } catch {
         console.error('Ocorreu um erro', errorResponse);
       }

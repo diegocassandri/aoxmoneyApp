@@ -79,7 +79,7 @@ export class PessoaPesquisaComponent implements OnInit {
       const acao = novoStatus ? 'Ativada' : 'Desativada' ;
 
       pessoa.ativo = novoStatus;
-      this.messageService.add({ severity: 'sucsess', detail: `Pessoa ${acao} com sucesso!`});
+      this.messageService.add({ severity: 'success', detail: `Pessoa ${acao} com sucesso!`});
     })
     .catch(erro => this.errorHandler.handle(erro));
   }

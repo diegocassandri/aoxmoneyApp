@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app-routing.module';
 import { SegurancaModule } from './seguranca/seguranca.module';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { JwtHttpInterceptor } from './seguranca/JwtHttpInterceptor';
 
 
 @NgModule({
@@ -22,7 +24,7 @@ import { SegurancaModule } from './seguranca/seguranca.module';
     SegurancaModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ { provide: HTTP_INTERCEPTORS, useClass: JwtHttpInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

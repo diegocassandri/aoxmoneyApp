@@ -8,7 +8,7 @@ import { registerLocaleData } from '@angular/common';
 
 import { ConfirmDialogModule } from 'primeng/components/confirmdialog/confirmdialog';
 import { ConfirmationService } from 'primeng/components/common/api';
-import {JwtHelper} from 'angular2-jwt';
+import {JwtHelperService} from '@auth0/angular-jwt';
 import { GrowlModule } from 'primeng/growl';
 import { MessageService } from 'primeng/components/common/messageservice';
 
@@ -21,35 +21,45 @@ import { AuthService } from '../seguranca/auth.service';
 import { NaoAutorizadoComponent } from './nao-autorizado.component';
 import { DasboardService } from '../dashboard/dasboard.service';
 import { RelatoriosService} from '../relatorios/relatorios.service';
+import { MoneyHttp } from '../seguranca/money-http';
+import {HttpClientModule} from '@angular/common/http';
 
-registerLocaleData(localePt, 'pt-BR');
+registerLocaleData(localePt);
+
 @NgModule({
   imports: [
     CommonModule,
+    HttpClientModule,
     RouterModule,
 
     GrowlModule,
     ConfirmDialogModule,
   ],
-  declarations: [NavbarComponent, PaginaNaoEncontradaComponent, NaoAutorizadoComponent],
+  declarations: [
+    NavbarComponent,
+    PaginaNaoEncontradaComponent,
+    NaoAutorizadoComponent
+  ],
   exports: [
     NavbarComponent,
     GrowlModule,
-    ConfirmDialogModule],
+    ConfirmDialogModule
+  ],
   providers: [
     LancamentoService,
     PessoaService,
     CategoriasService,
-    ErrorHandlerService,
-    Title,
-    AuthService,
     DasboardService,
     RelatoriosService,
+    ErrorHandlerService,
+    AuthService,
+    MoneyHttp,
 
     ConfirmationService,
     MessageService,
-    JwtHelper,
-    { provide: LOCALE_ID, useValue: 'pt-BR' }
+    JwtHelperService,
+    Title,
+    { provide: LOCALE_ID, useValue: 'pt' }
   ]
 })
 export class CoreModule { }
